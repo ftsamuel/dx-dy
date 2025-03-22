@@ -1,0 +1,430 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ /* header{
+     border: 3px solid tomato; 
+}  */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'); 
+
+body{
+    font-family: "Lato", serif;
+} 
+.backdrop{
+    /* border: 4px solid purple; */
+    width: 100%;
+    height: 100%;
+    background:rgb(168, 45, 73, 0.5 ) ;
+    position: fixed;
+    left: 0px;
+    top: 0;
+    display: none;
+
+}
+.show_backdrop{
+    display: block;
+}
+.nav-mobile{
+    /* border: 3px solid black; */
+    display: none;
+    justify-content: space-between;
+    padding: 10px 30px;
+    align-items: center;
+    background: #a82d49;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.mobile-log{ 
+    /* width: 200px;
+    height: 50px; */
+    /* border: 3px solid tomato; */
+    display: flex;
+    color: white; 
+    align-items: center;
+}
+.mobile-log-container{
+    border: 3px solid white;
+    font-size: 25px;
+    padding: 5px;
+}
+.mobile-log span{
+    font-size: 25px;
+    font-weight: bolder;
+    margin-left: 10px;
+}
+.hamburger{
+    /* border: 3px solid tomato; */
+    height: 25px;
+    width: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 6;
+}
+.showburger .menu{
+    background: transparent;
+}
+.showburger .menu::before{
+    transform:translateY(0) rotate(45deg);
+}
+.showburger .menu::after{
+    transform:translateY(0) rotate(-45deg)
+}
+.mobile_link_holder{
+    /* border: 3px solid black; */
+    transform: translateX(200%);
+    position: fixed;
+    right: 0;
+    top:0;
+    height: 100vh;
+    width: 50%;
+    color: #a82d49;
+    background: #a82d49;
+    transition: all 3s ease;
+    /* display: flex;
+    flex-direction: column;
+    align-items: space-evenly; */
+}
+.show_mobile_link_holder{
+transform: translateX(0);
+}
+.mobile_link_holder ul{
+list-style: none;
+}
+.mobile_link_holder a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 15px 0 15px 10px;
+}
+.mobile_active_link{
+    background: white;
+    color:#a82d49 !important;
+}
+.mobile_link_holder button{
+   border: 2px solid white;
+   color: white;
+   background: transparent; 
+   margin-left: 20px;
+}
+.menu{
+    padding: 0 10px;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    position: relative;
+
+}
+.menu::before{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: white;
+    position: absolute;
+    transform:translateY(-10px);
+}
+.menu::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: white;
+    position: absolute;
+    transform:translateY(10px);
+}
+.nav-destop{
+/* border: 3px solid black; */
+width: 100%;
+height: 60px;
+display: flex;
+align-items: center;
+ position: fixed;  
+ left: 0;
+top: 0;  
+width: 100%;
+background: white;
+/* border: 3px solid tomato; */
+justify-content: flex-end;
+margin-bottom: 30px;
+text-align: center;
+}
+.desktop-logo{
+      position:absolute; 
+     left: 60px;
+    top: 0; 
+    /* padding-right: 50px; */
+    /* border: 4px solid white; */
+    padding: 30px 0;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    background: #a82d49;
+    display: flex;
+    text-align:center;
+    justify-content: center;
+    font-size: 50px;
+    margin-top: 10px;
+}
+.btn {
+    padding: 15px 20px;
+ }
+ .btn-white{
+    background-color:transparent;
+    border: 2px solid #a82d49;
+    color: #000000;
+
+ }
+ .btn-white:hover{
+    color: #a82d49;
+ }
+ .btn-red {
+    background-color: rgb(168, 45, 73);
+    color: white;
+    border: 2px solid transparent;
+    margin-bottom: 40px;
+ }
+ .btn-red:hover {
+    background: transparent;
+    color: #a82d49;
+    border: 2px solid #a82d49;
+}
+
+.desktop-linkholder{
+    display: flex;
+    /* position: fixed;
+    top: 0; */
+    color: #a82d49;
+    padding-top: 60px;
+    /* bottom: 200px; */
+    /* border: 3px solid tomato; */
+}
+
+.desktop-linkholder ul{
+    /* border: 3px solid purple; */
+list-style: none;
+display: flex;
+}
+.desktop-linkholder ul a {
+    text-decoration: none;
+    color: #a82d49;
+    /* color: #fff; */
+    padding: 15px 20px;
+    display: block;
+    border: 2px solid transparent;
+}
+.desktop-linkholder ul a:hover{
+    border: 2px solid tomato;
+}
+.header-bannersection{
+    /* border: 3px solid blue; */
+    padding-top: 130px;
+    min-height: 450px;
+    /* background: url(image/image-food3.jpg); */
+    background-size: cover; 
+    margin-top: 20px;
+}
+.banner-content{
+    /* border: 3px solid red; */
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.header_textcontainer{
+    /* border: 3px solid purple; */
+    width: 50%;
+}
+.header-icon{
+    margin-left: 20px;
+}
+.header_textcontainer h1{
+color: #43121d;
+font-size: 45px;
+line-height: 1.2;
+}
+.header_textcontainer p{
+    color: #777;
+    margin: 20px 0;
+    line-height: 1.7;
+}
+.header_textcontainer button{
+margin-right: 10px;
+
+}
+.header-countersection{
+    background: #a82d49;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 20px;
+}
+.counter{
+    text-align: center;
+    width: 180px;
+}
+.counter p{
+   color: white;
+   text-transform: uppercase;
+}
+.counter h2{
+    color: white;
+    font-size: 30px;
+}
+ /* about us section starts here  */
+ .aboutus_section{
+    /* border: 3px solid tomato; */
+    width: 90%;
+    margin: 0 auto;
+    
+ }
+ .aboutus_container{
+    /* border: 3px solid black; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    flex-wrap: wrap;
+
+ }
+ .aboutimage-holder{
+    width: 48%;
+    height: 350px;
+    border-radius: 25px;
+    overflow: hidden;
+    min-height: 350px;
+    object-fit:cover ;
+ }
+ .aboutimage-holder img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-width: 350px;
+ }
+ .abouttext-holder{
+    /* border: 3px solid blue; */
+    width: 48%;
+    min-height: 350px;
+    min-width: 350px;
+ }
+ .abouttext-holder h2{
+    background: rgb(199, 199, 199, 0.3); 
+    border-right: 5px solid #a82d49;
+    border-left: 5px solid #a82d49;
+    color: #a82d49;
+    padding-left: 20px;
+    font-size: 27px;
+    margin-bottom: 50px;
+ }
+ .abouttext-holder p{
+ margin: 20px 0;
+ }
+ .abouttext-holder ul{
+list-style: none;
+margin-bottom: 50px;
+ }
+ .about-us-icons{
+    color: #a82d49;
+    margin-right: 10px;
+ }
+ .aboutus-banner-section{
+    border: 3px solid tomato;
+    /* height: 250px; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+
+    background: linear-gradient(to right, rgb(168, 45, 73, 0.5)), url();
+    background-size: cover;
+    background-position:bottom right ;
+    padding: 30px;
+}
+.aboutus-banner-section h2{
+    color: #a82d49; 
+ }
+ .aboutus-banner-section{
+    margin: 20px 0;
+ }
+.aboutus-banner-section button{
+height: 60px;
+width: 60px;
+border-radius: 50%;
+font-size: 30px;
+color: white;
+background: #a82d49;
+border: 2px solid white;
+animation: ripple 2s infinite;
+
+
+/* animation-duration: 2s;
+animation-iteration-count: 2s infinite; */
+}
+/* about us section ends here */
+/* Explore food section starts*/
+.explorefoods{
+border: 3px solid black;
+height: 450px;
+width: 90%;
+margin: 0 auto;
+}
+.explorefoods h2{
+    text-align: center;
+}
+.explorefoods-p{
+    padding: 0 20px;
+    margin: 15px;
+
+} 
+.explore-foodcontainer{
+    border: 3px solid tomato;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.explorefood-card{
+width: 32%;
+border: 3px solid purple;
+}
+.explorefood-cardimageholder{
+    border: 3px solid black;
+    height: 200px;
+    display: flex;
+
+}
+.explorefood-cardtextholder{
+    border: 3px solid red;
+    
+}
+.explorefood-cardimageholder img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+padding-left: 100px;
+}
+.foodcard-title{
+  font-weight: bolder;  
+  display: block;
+}
+.foodcard-time{
+    display: block;
+    margin: 8px 0;
+}
+.foodcard-price{
+    border-bottom: 2px solid rgb(199, 199, 199, 0.1);
+    margin: 5px 0;
+    display: block;
+    padding-bottom: 5px;
+}
+.foodcard-price span{
+    color: #777;
+    text-decoration:line-through;
+}
+/* Explore food section ends*/

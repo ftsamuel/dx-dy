@@ -1,0 +1,47 @@
+@media screen and (max-width:855px)
+{
+    .nav-destop{
+        display: none;
+    }
+    .nav-mobile{
+        display: flex;
+    }
+    .header-bannersection{
+        padding: 50px 0 30px 0;
+        position: center;
+    }
+/* .hamburger
+    {position: fixed;
+        top: 0;
+        right: 0;} */
+    .header_textcontainer{
+       min-width: 100%;
+    }   
+    /*header section end here */
+    /* about us section start */
+     .aboutus_container{
+        justify-content: center;
+    } 
+    .abouttext-holder{
+        min-height: 100%;
+        margin-top: 40px 0;
+    }
+    .aboutimage-holder{
+        min-width: 95%;
+        margin: 40px 0;
+    }
+    /* about us section end */
+    header,
+     .nav-destop, 
+     .desktop-linkholder
+    main {
+        max-width: 1500px;
+        margin: 0 auto;
+    } 
+    .aboutus-banner-section{
+        border: 3px solid tomato;
+        height: 250px;
+        width: 50%;
+    }
+}
+    
